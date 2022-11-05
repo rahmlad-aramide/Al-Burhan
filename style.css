@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
 :root {
     --primary: #683503;
     --secondary: #280A00;
@@ -10,7 +12,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
+body::-webkit-scrollbar {
+    width: 8px;
+  }
+  body::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--dark);
+    border-radius: 20px;  
+    border: 1.5px solid var(--primary);
+  }
 
 .header {
     display: flex;
@@ -30,7 +44,78 @@
     width: 1.875rem;
 }
 
-/* Mobile View */
-@media (max-width: 600px) {
+.hero {
+    background-image: url('Assets/images/hero.svg');
+    height: calc(100vh - 4rem);
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.hero .content {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3.125rem;
+    line-height: 5.25rem;
+    text-align: center;
+    color: var(--white);
+}
+.hero .content button {
+    background-color: var(--white);
+    color: var(--primary);
+    border: none;
+    border-radius: 0.3125rem;
+    padding: 0.6875rem 1.375rem;
+    margin-block: 2rem;
+}
+.hero .left_arrow img, .hero .right_arrow img {
+    width: 2.5rem;
+    margin-inline: 2rem;
+    cursor: pointer;
+}
+.hero .dots {
+    position: absolute;
+    bottom: 2rem;
+    display: flex;
+}
+.hero .dots div {
+    background-color: white;
+    opacity: 0.5;
+    width: 1rem;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    margin-inline: .2rem;
+    cursor: pointer;
+}
+.hero .dots div.active {
+    opacity: 1;
+}
 
+.about {
+    height: 100vh;
+}
+/* Tablet View */
+@media (max-width: 992px) {
+    .hero .content {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 2.125rem;
+        line-height: 3.25rem;
+        text-align: center;
+        color: var(--white);
+    }
+}
+
+/* Mobile view */
+@media (max-width: 600px) {
+    .hero .content {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.125rem;
+        line-height: 2.25rem;
+        text-align: center;
+        color: var(--white);
+    }
 }

@@ -1,0 +1,36 @@
+:root {
+    --primary: #683503;
+    --secondary: #280A00;
+    --text: #333333;
+    --white: #FFFFFF;
+    --dark: #080200;
+    --icon-bg: #E1D7CD;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+    padding: 0 2rem;
+    background-color: var(--white);
+}
+
+.brand img {
+    width: 2.5rem;
+}
+
+.toggler img {
+    width: 1.875rem;
+}
+
+/* Mobile View */
+@media (max-width: 600px) {
+
+}

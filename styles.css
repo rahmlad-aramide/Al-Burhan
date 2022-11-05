@@ -1,5 +1,14 @@
+:root {
+    --primary: #683503;
+    --secondary: #280A00;
+    --text: #333333;
+    --white: #FFFFFF;
+    --dark: #080200;
+    --icon-bg: #E1D7CD;
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+

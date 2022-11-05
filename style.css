@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
+/* Theme colors */
+
 :root {
     --primary: #683503;
     --secondary: #280A00;
@@ -8,23 +10,44 @@
     --dark: #080200;
     --icon-bg: #E1D7CD;
 }
+
+/* Reset and font */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
+/* Custom scrollbar */
+
 body::-webkit-scrollbar {
     width: 8px;
-  }
-  body::-webkit-scrollbar-track {
+}
+
+body::-webkit-scrollbar-track {
     background: transparent;
-  }
-  body::-webkit-scrollbar-thumb {
+}
+
+body::-webkit-scrollbar-thumb {
     background-color: var(--dark);
-    border-radius: 20px;  
+    border-radius: 20px;
     border: 1.5px solid var(--primary);
-  }
+}
+
+/* Utility Class */
+
+button {
+    cursor: pointer;
+    transition: ease;
+    transition-duration: 500ms;
+}
+button:hover {
+    scale: 90%;
+}
+
+/* Header Section */
 
 .header {
     display: flex;
@@ -34,6 +57,7 @@ body::-webkit-scrollbar {
     height: 4rem;
     padding: 0 2rem;
     background-color: var(--white);
+    width: 100%;
 }
 
 .brand img {
@@ -44,6 +68,8 @@ body::-webkit-scrollbar {
     width: 1.875rem;
 }
 
+/* Hero Section */
+
 .hero {
     background-image: url('Assets/images/hero.svg');
     height: calc(100vh - 4rem);
@@ -53,8 +79,10 @@ body::-webkit-scrollbar {
     justify-content: center;
     align-items: center;
     position: relative;
+    padding-inline: .5rem;
 }
-.hero .content {
+
+.hero .hero_content {
     font-style: normal;
     font-weight: 600;
     font-size: 3.125rem;
@@ -62,7 +90,8 @@ body::-webkit-scrollbar {
     text-align: center;
     color: var(--white);
 }
-.hero .content button {
+
+.hero .hero_content button {
     background-color: var(--white);
     color: var(--primary);
     border: none;
@@ -70,16 +99,25 @@ body::-webkit-scrollbar {
     padding: 0.6875rem 1.375rem;
     margin-block: 2rem;
 }
-.hero .left_arrow img, .hero .right_arrow img {
+.hidden {
+    display: none !important;
+}
+.border {
+    border: 2px solid red;
+}
+.hero .left_arrow img,
+.hero .right_arrow img {
     width: 2.5rem;
     margin-inline: 2rem;
     cursor: pointer;
 }
+
 .hero .dots {
     position: absolute;
     bottom: 2rem;
     display: flex;
 }
+
 .hero .dots div {
     background-color: white;
     opacity: 0.5;
@@ -89,16 +127,127 @@ body::-webkit-scrollbar {
     margin-inline: .2rem;
     cursor: pointer;
 }
+
 .hero .dots div.active {
     opacity: 1;
 }
 
+/* About Section */
+
 .about {
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding-inline: 1rem;
 }
+
+.about .about_content, .about .about_image {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    width: 50%;
+    height: 80vh;
+}
+
+.about .about_image {
+    width: 40%;
+    margin-block: 2rem;
+}
+
+.about .about_image img {
+    width: 90%;
+}
+
+.about .about_content {
+    width: 40%;
+}
+.about .about_content h3, .stories .stories_head h3, .activities .activities_head h3 {
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 63px;
+    color: var(--secondary);
+}
+.about .about_content p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 43px;
+    color: var(--text);
+}
+.about .about_content button {
+    color: var(--white);
+    background-color: var(--primary);
+    border: none;
+    border-radius: 0.3125rem;
+    padding: 0.6875rem 1.375rem;
+    margin-block: 1rem;
+    width: fit-content;
+}
+.stories .stories_head {
+    display: flex;
+    justify-content: center;
+}
+.stories .stories_head h3 {
+    padding: .5rem;
+}
+.stories .stories_body {
+    display: flex;
+    flex-direction: row;
+}
+
+.stories .stories_body .stories_content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+.stories .stories_body .stories_content div {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.stories .stories_body .stories_content div img{
+    width: 100%;
+}
+.stories .left_arrow img,
+.stories .right_arrow img {
+    width: 2rem;
+    margin-inline: 2rem;
+    cursor: pointer;
+}
+
+.stories .left_arrow.disabled,
+.stories .right_arrow.disabled {
+    display: none;
+}
+
+/* Activities section */
+.activities .activities_head {
+    display: flex;
+    justify-content: center;
+}
+.activities .activities_body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);   
+}
+.activities .activities_body div .icon {
+    background-color: var(--icon-bg);
+    display: flex;
+    justify-content: center;
+    width: 8rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+.activities_body div .icon img {
+    width: 6rem;
+}
+
 /* Tablet View */
+
 @media (max-width: 992px) {
-    .hero .content {
+    .hero .hero_content {
         font-style: normal;
         font-weight: 600;
         font-size: 2.125rem;
@@ -106,16 +255,85 @@ body::-webkit-scrollbar {
         text-align: center;
         color: var(--white);
     }
+    .hero .left_arrow img,
+    .hero .right_arrow img {
+        width: 2.5rem;
+        margin-inline: 1rem;
+        cursor: pointer;
+    }
+    .about {
+        flex-direction: column;
+        height: fit-content;
+    }
+    .about .about_content, .about .about_image {
+        width: 100%;
+        height: fit-content;
+    }
+    
+    .about .about_image {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .about .about_image img {
+        width: 90%;
+    }
+    
+    .about .about_content {
+        width: 90%;
+    }
+    .about .about_content h3, .stories .stories_head h3, .activities .activities_head h3 {
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 63px;
+    }
+    .about .about_content p {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 43px;
+    }
+    .stories .stories_body .stories_content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .stories .stories_body {
+        flex-direction: column;
+    }
+    .stories .stories_body .stories_content div {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-inline: auto ;
+    }
+    .stories .stories_body .stories_content div img {
+        width: 90%;   
+    }
 }
 
 /* Mobile view */
+
 @media (max-width: 600px) {
-    .hero .content {
+    .hero .hero_content {
         font-style: normal;
         font-weight: 600;
         font-size: 1.125rem;
         line-height: 2.25rem;
         text-align: center;
         color: var(--white);
+    }
+    .hero .left_arrow img,
+    .hero .right_arrow img {
+        width: 2.5rem;
+        margin-inline: .5rem;
+        cursor: pointer;
+    }
+    .about .about_content button {
+        width: 100%;
+    }
+    .stories .stories_body .stories_content {
+        grid-template-columns: repeat(1, 1fr);
     }
 }

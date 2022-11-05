@@ -27,7 +27,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-    background: transparent;
+    background: lightgray;
 }
 
 body::-webkit-scrollbar-thumb {
@@ -153,6 +153,7 @@ section:not(.hero){
     flex-direction: column;
     width: 50%;
     height: 80vh;
+    min-height: 100%;
 }
 
 .about .about_image {

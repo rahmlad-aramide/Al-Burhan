@@ -199,7 +199,7 @@ section:not(.hero){
     justify-content: center;
 }
 .stories .stories_head h3 {
-    padding: .5rem;
+    padding: 1rem;
 }
 .stories .stories_body {
     display: flex;
@@ -385,6 +385,9 @@ section:not(.hero){
         gap: 2rem;
         padding-inline: 1rem;
         align-items: center;
+    }
+    .prayer {
+        height: 100%;
     }
     .prayer .prayer_times {
         grid-template-columns: repeat(3, 1fr);

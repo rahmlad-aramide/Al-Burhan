@@ -47,6 +47,13 @@ button {
 button:hover {
     scale: 90%;
 }
+a {
+    text-decoration: none;
+    color: white;
+}
+li {
+    list-style-type: none;
+}
 
 /* Header Section */
 
@@ -184,14 +191,20 @@ section:not(.hero) {
 .activities .activities_head h3,
 .prayer .prayer_head h3,
 .programs .programs_head h3, 
-.ask .ask_content h3 {
+.ask .ask_content h3, 
+.support .support_content h3,
+.umrah .umrah_content h3,
+.footer .footer_newsletter h3 {
     font-weight: 600;
     font-size: 32px;
     line-height: 40px;
     color: var(--secondary);
 }
 
-.about .about_content p {
+.about .about_content p, 
+.support .support_content p,
+.umrah .umrah_content p,
+.footer .footer_newsletter p {
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -302,12 +315,15 @@ section:not(.hero) {
     flex-direction: column;
 }
 
-.prayer .prayer_head {
+.prayer .prayer_head, 
+.footer .footer_newsletter p {
     text-align: center;
     padding-inline: 1rem;
 }
 
-.prayer .prayer_head h3 {
+.prayer .prayer_head h3, 
+.support .support_content h3,
+.footer .footer_newsletter h3 {
     color: var(--white);
     margin-bottom: 1.5rem;
 }
@@ -332,7 +348,10 @@ section:not(.hero) {
 }
 
 .prayer .prayer_timetable button,
-.ask .ask_content button {
+.ask .ask_content button, 
+.support .support_content button,
+.umrah .umrah_content button,
+.footer .footer_newsletter .footer_newsletter_form button {
     color: var(--white);
     background-color: var(--primary);
     border: none;
@@ -358,7 +377,8 @@ section:not(.hero) {
     gap: 2rem;
 }
 
-.programs .programs_body .programs_item {
+.programs .programs_body .programs_item, 
+.ask .ask_content p  {
     color: var(--text);
 }
 
@@ -387,19 +407,95 @@ section:not(.hero) {
     margin-inline: 4rem;
 }
 .ask .ask_content {
-    width: 60%;
+    width: 55%;
 }
 .ask .ask_content p {
     color: var(--text);
 }
-.ask .ask_image {
+.ask .ask_image, .footer .footer_newsletter p {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .ask .ask_image img{
     width: 90%;
 }
+.support {
+    background-image: url('Assets/images/support.svg');
+    background-position: bottom;
+    background-size: cover;
+    height: 70vh;
+    display: flex;
+    padding-inline: 1rem;
+}
 
+.support .support_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.support .support_content p,
+.footer .footer_newsletter p {
+    color: var(--white);
+    width: 90%;
+}
+.umrah {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-inline: 4rem;
+    padding-block: 4rem;
+    align-items: center;
+}
+.umrah .umrah_content {
+    width: 55%;
+}
+.umrah .umrah_image img {
+    width: 90%;
+}
+.footer {
+    background-color: var(--dark);
+    color: var(--white);
+    padding: 4rem;
+}
+.footer .footer_newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer .footer_newsletter h3 {
+    margin-bottom: 0;
+}
+.footer .footer_newsletter .footer_newsletter_form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    width: 100%;
+}
+.footer .footer_newsletter .footer_newsletter_form input {
+    width: 100%;
+    padding: 1.5rem .8rem;
+    background-color: var(--white);
+    border: none;
+    border-radius: 10px;
+    position: relative;
+    margin-inline: 4rem;
+}
+.footer .footer_newsletter .footer_newsletter_form button {
+    position: absolute;
+    right: 5rem;
+    margin-inline: 4rem;
+}
+.footer button .mobile {
+    display: none;
+}
+.footer .footer_content {
+    display: flex;
+}
 /*----------------- Tablet View ----------------*/
 
 @media (max-width: 992px) {
@@ -449,13 +545,17 @@ section:not(.hero) {
     .stories .stories_head h3,
     .activities .activities_head h3, 
     .prayer .prayer_head h3,
-    .ask .ask_content h3 {
+    .programs .programs_head h3,
+    .ask .ask_content h3,
+    .umrah .umrah_content h3 {
         font-weight: 600;
         font-size: 32px;
         line-height: normal;
+        text-align: center;
     }
 
-    .about .about_content p {
+    .about .about_content p,
+    .umrah .umrah_content p {
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
@@ -505,9 +605,6 @@ section:not(.hero) {
         padding: 2rem 0;
     }
 
-    .prayer .prayer_head h3 {
-        line-height: normal;
-    }
 
     .prayer .prayer_head p {
         margin-bottom: 1rem;
@@ -525,12 +622,38 @@ section:not(.hero) {
 
     .ask {
         flex-direction: column;
-        margin-inline: 2rem;
+        margin-inline: 0;
         justify-content: center;
         align-items: center;
     }
     .ask .ask_content {
-        width: 90%;
+        width: 100%;
+    }
+    .umrah {
+        flex-direction: column;
+        padding-block: 0;
+        margin-inline: 1rem;
+    }
+    .umrah .umrah_image {
+        display: flex;
+        justify-content: center;
+    }
+    .umrah .umrah_content {
+        width: 100%;
+        margin-top: 2rem;
+    }
+    .footer .footer_newsletter .footer_newsletter_form input {        
+        margin-inline: .5rem;
+    }
+    .footer .footer_newsletter .footer_newsletter_form button {
+        margin-inline: .5rem;
+    }
+    .footer button .mobile {
+        display: block;
+        width: fit-content;
+    }
+    .footer button .desktop {
+        display: none;
     }
 }
 

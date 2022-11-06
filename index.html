@@ -7,11 +7,27 @@
     <title>Al-Burhan</title>
     <link rel="shortcut icon" href="Assets/logo.svg" type="image/x-icon">
     <link rel="stylesheet" href="Stylesheets/style.css">
+    <script defer src="Scripts/script.js"></script>
 </head>
 <body>
     <header class="header">
         <div class="brand"><img src="Assets/small-logo.svg" alt="Al-Burhan"></div>
-        <nav class="toggler"><img src="Assets/toggler.svg" alt="Toggler"></nav>
+        <nav class="toggler">
+            <div class="hamburger">
+                <img class="open" src="Assets/toggler.svg" alt="Toggler">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+            <div class="mobile-nav">
+                <div class="close">&times;</div>
+                <ul class="mobile-nav-links">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
     <main>
         <section class="hero">

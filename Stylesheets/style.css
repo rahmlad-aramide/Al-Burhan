@@ -38,14 +38,16 @@ body::-webkit-scrollbar-thumb {
 
 /* Utility Class */
 
-button {
+button, .toggler .hamburger {
     cursor: pointer;
     transition: ease;
     transition-duration: 500ms;
     font-weight: 600;
 }
 
-button:hover {
+button:hover, 
+.toggler .hamburger img:hover,
+.mobile-nav .close:focus {
     scale: 90%;
 }
 a {
@@ -56,7 +58,10 @@ a {
 li {
     list-style-type: none;
 }
-
+.mobile-nav.open-mobile {
+    transform: translateX(0);
+    /* right: 0; */
+}
 
 /* **************** HOME PAGE ************** */
 
@@ -78,8 +83,58 @@ li {
     width: 2.5rem;
 }
 
-.toggler img {
+.toggler .hamburger img {
+    display: none;
     width: 1.875rem;
+}
+.toggler .nav-links {
+    display: flex;
+}
+.toggler .nav-links li a {
+    color: var(--dark);
+    padding-inline: 1rem;
+}
+body {
+    position: relative;
+}
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 70%;
+    height: 100%;
+    background-color: #ffffff95;
+    backdrop-filter: blur(8px);
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    transition: ease;
+    transition-duration: 500ms;
+    transform: translateX(100%);
+}
+.mobile-nav .close {
+    position: absolute;
+    top: .4rem;
+    right: 1.7rem;
+    font-size: 3rem;
+    font-weight: bold;
+}
+.mobile-nav .mobile-nav-links li a {
+    color: var(--dark);
+
+}
+.mobile-nav .mobile-nav-links li {
+    margin-block: 1rem;
+}
+.toggler .nav-links li a.active, 
+.toggler .nav-links li a:hover,
+.mobile-nav .mobile-nav-links li a.active,
+.mobile-nav .mobile-nav-links li a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 5px;
 }
 
 section:not(.hero) {
@@ -569,6 +624,12 @@ section:not(.hero) {
 /*----------------- Tablet View ----------------*/
 
 @media (max-width: 992px) {
+    .toggler .hamburger img {
+        display: block;
+    }
+    .toggler .nav-links {
+        display: none;
+    }
     .hero .hero_content {
         font-style: normal;
         font-weight: 600;

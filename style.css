@@ -43,6 +43,7 @@ button {
     transition: ease;
     transition-duration: 500ms;
 }
+
 button:hover {
     scale: 90%;
 }
@@ -68,7 +69,7 @@ button:hover {
     width: 1.875rem;
 }
 
-section:not(.hero){
+section:not(.hero) {
     margin-top: 4rem;
 }
 
@@ -95,7 +96,8 @@ section:not(.hero){
     color: var(--white);
 }
 
-.hero .hero_content button, .programs .programs_body .programs_item button {
+.hero .hero_content button,
+.programs .programs_body .programs_item button {
     background-color: var(--white);
     color: var(--primary);
     border: none;
@@ -103,15 +105,19 @@ section:not(.hero){
     padding: 0.6875rem 1.375rem;
     margin-block: 2rem;
 }
+
 .hidden {
     display: none !important;
 }
+
 .border {
     border: 2px solid red;
 }
+
 .bg {
     border: 2px solid green
 }
+
 .hero .left_arrow img,
 .hero .right_arrow img {
     width: 2.5rem;
@@ -150,7 +156,8 @@ section:not(.hero){
     padding-inline: 1rem;
 }
 
-.about .about_content, .about .about_image {
+.about .about_content,
+.about .about_image {
     display: flex;
     justify-content: start;
     flex-direction: column;
@@ -171,16 +178,19 @@ section:not(.hero){
 .about .about_content {
     width: 40%;
 }
-.about .about_content h3, 
-.stories .stories_head h3, 
-.activities .activities_head h3, 
-.prayer .prayer_head h3, 
-.programs .programs_head h3 {
+
+.about .about_content h3,
+.stories .stories_head h3,
+.activities .activities_head h3,
+.prayer .prayer_head h3,
+.programs .programs_head h3, 
+.ask .ask_content h3 {
     font-weight: 600;
     font-size: 32px;
-    line-height: 63px;
+    line-height: 40px;
     color: var(--secondary);
 }
+
 .about .about_content p {
     font-style: normal;
     font-weight: 400;
@@ -189,7 +199,9 @@ section:not(.hero){
     color: var(--text);
     margin-top: 1rem;
 }
-.about .about_content button, .programs .programs_body .programs_item:nth-child(even) button {
+
+.about .about_content button,
+.programs .programs_body .programs_item:nth-child(even) button {
     color: var(--white);
     background-color: var(--primary);
     border: none;
@@ -198,33 +210,40 @@ section:not(.hero){
     margin-block: 1rem;
     width: fit-content;
 }
+
 .stories .stories_head {
     display: flex;
     justify-content: center;
 }
+
 .stories .stories_head h3 {
     padding: 1rem;
 }
+
 .stories .stories_body {
     display: flex;
     flex-direction: row;
     margin-top: 2rem;
 }
 
-.stories .stories_body .stories_content, .programs .programs_body  {
+.stories .stories_body .stories_content,
+.programs .programs_body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
 }
+
 .stories .stories_body .stories_content div {
     width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.stories .stories_body .stories_content div img{
+
+.stories .stories_body .stories_content div img {
     width: 100%;
 }
+
 .stories .left_arrow img,
 .stories .right_arrow img {
     width: 2rem;
@@ -242,19 +261,22 @@ section:not(.hero){
     display: flex;
     justify-content: center;
 }
+
 .activities .activities_body {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);   
+    grid-template-columns: repeat(4, 1fr);
     gap: 4rem;
     margin-top: 4rem;
     text-align: center;
 }
+
 .activities .activities_body div {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 }
+
 .activities .activities_body div .icon {
     background-color: var(--icon-bg);
     display: flex;
@@ -263,9 +285,11 @@ section:not(.hero){
     aspect-ratio: 1;
     border-radius: 50%;
 }
+
 .activities_body div .icon img {
     width: 3rem;
 }
+
 .prayer {
     background-image: url('Assets/images/prayer-times.svg');
     background-size: cover;
@@ -277,30 +301,38 @@ section:not(.hero){
     align-items: center;
     flex-direction: column;
 }
+
 .prayer .prayer_head {
     text-align: center;
     padding-inline: 1rem;
 }
+
 .prayer .prayer_head h3 {
     color: var(--white);
     margin-bottom: 1.5rem;
 }
+
 .prayer .prayer_times {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 4rem;
 }
+
 .prayer .prayer_times div {
     text-align: center;
 }
+
 .prayer .prayer_times div h5 {
     margin-bottom: 1rem;
 }
+
 .prayer .prayer_timetable {
     display: flex;
     justify-content: center;
 }
-.prayer .prayer_timetable button {
+
+.prayer .prayer_timetable button,
+.ask .ask_content button {
     color: var(--white);
     background-color: var(--primary);
     border: none;
@@ -309,33 +341,63 @@ section:not(.hero){
     margin-block: 1rem;
     width: fit-content;
 }
+
 .programs {
     display: flex;
     flex-direction: column;
     margin: 1rem;
 }
+
 .programs_head {
     display: flex;
     justify-content: center;
     margin-block: 2rem 3rem;
 }
+
 .programs .programs_body {
     gap: 2rem;
 }
+
 .programs .programs_body .programs_item {
     color: var(--text);
 }
+
 .programs .programs_body .programs_item img {
     width: 100%;
 }
-.programs .programs_body .programs_item button, .programs .programs_body .programs_item:nth-child(even) button {
+
+.programs .programs_body .programs_item button,
+.programs .programs_body .programs_item:nth-child(even) button {
     border: 2px solid var(--primary);
 }
-.programs .programs_body .programs_item:nth-child(even) button {
+
+.programs .programs_body .programs_item:nth-child(even) button,
+.ask .ask_content button {
     margin-block: 2rem;
 }
-.programs .programs_body .programs_item h3 {
+
+.programs .programs_body .programs_item h3, .ask .ask_content h3 {
     margin-block: 1rem;
+}
+
+.ask {
+    display: flex;
+    flex-direction: row;
+    padding-inline: 1rem;
+    margin-inline: 4rem;
+}
+.ask .ask_content {
+    width: 60%;
+}
+.ask .ask_content p {
+    color: var(--text);
+}
+.ask .ask_image {
+    display: flex;
+    justify-content: center;
+}
+.ask .ask_image img{
+    width: 90%;
 }
 
 /*----------------- Tablet View ----------------*/
@@ -349,53 +411,66 @@ section:not(.hero){
         text-align: center;
         color: var(--white);
     }
+
     .hero .left_arrow img,
     .hero .right_arrow img {
         width: 2.5rem;
         margin-inline: 1rem;
         cursor: pointer;
     }
+
     .about {
         flex-direction: column;
         height: fit-content;
     }
-    .about .about_content, .about .about_image {
+
+    .about .about_content,
+    .about .about_image {
         width: 100%;
         height: fit-content;
     }
-    
+
     .about .about_image {
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    
+
     .about .about_image img {
         width: 90%;
     }
-    
+
     .about .about_content {
         width: 90%;
     }
-    .about .about_content h3, .stories .stories_head h3, .activities .activities_head h3 .prayer .prayer_head h3 {
+
+    .about .about_content h3,
+    .stories .stories_head h3,
+    .activities .activities_head h3, 
+    .prayer .prayer_head h3,
+    .ask .ask_content h3 {
         font-weight: 600;
         font-size: 32px;
         line-height: normal;
     }
+
     .about .about_content p {
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
         line-height: normal;
     }
-    .stories .stories_body .stories_content, .programs .programs_body {
+
+    .stories .stories_body .stories_content,
+    .programs .programs_body {
         grid-template-columns: repeat(2, 1fr);
     }
 
     .stories .stories_body {
         flex-direction: column;
     }
+
     .stories .stories_body .stories_content div {
         width: 90%;
         display: flex;
@@ -404,39 +479,58 @@ section:not(.hero){
         margin-inline: auto;
         align-items: center;
     }
+
     .stories .stories_body .stories_content div img {
-        width: 90%;   
+        width: 90%;
     }
+
     .stories .stories_body .stories_content div p {
         padding-inline: 1rem;
     }
+
     .stories .left_arrow,
     .stories .right_arrow {
-    display: none;
-}
+        display: none;
+    }
+
     .activities .activities_body {
-        grid-template-columns: repeat(2, 1fr);  
+        grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
         padding-inline: 1rem;
         align-items: center;
     }
+
     .prayer {
         height: 100%;
         padding: 2rem 0;
     }
+
     .prayer .prayer_head h3 {
         line-height: normal;
     }
+
     .prayer .prayer_head p {
         margin-bottom: 1rem;
     }
+
     .prayer .prayer_times {
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
         margin-bottom: 1rem;
     }
+
     .prayer .prayer_times div h5 {
         margin-bottom: .5rem;
+    }
+
+    .ask {
+        flex-direction: column;
+        margin-inline: 2rem;
+        justify-content: center;
+        align-items: center;
+    }
+    .ask .ask_content {
+        width: 90%;
     }
 }
 
@@ -451,19 +545,24 @@ section:not(.hero){
         text-align: center;
         color: var(--white);
     }
+
     .hero .left_arrow img,
     .hero .right_arrow img {
         width: 2.5rem;
         margin-inline: .5rem;
         cursor: pointer;
     }
+
     .about .about_content button {
         width: 100%;
     }
-    .stories .stories_body .stories_content, .programs .programs_body {
+
+    .stories .stories_body .stories_content,
+    .programs .programs_body {
         grid-template-columns: repeat(1, 1fr);
         gap: 1rem;
     }
+
     .prayer .prayer_times {
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;

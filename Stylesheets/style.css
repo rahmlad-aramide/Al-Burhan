@@ -57,6 +57,10 @@ li {
     list-style-type: none;
 }
 
+
+/* **************** HOME PAGE ************** */
+
+
 /* Header Section */
 
 .header {
@@ -217,7 +221,8 @@ section:not(.hero) {
 }
 
 .about .about_content button,
-.programs .programs_body .programs_item:nth-child(even) button {
+.programs .programs_body .programs_item:nth-child(even) button,
+.team .open-position button { 
     color: var(--white);
     background-color: var(--primary);
     border: none;
@@ -559,6 +564,8 @@ section:not(.hero) {
 .copyright li a, .copyright li {
     font-weight: 600;
 }
+
+
 /*----------------- Tablet View ----------------*/
 
 @media (max-width: 992px) {

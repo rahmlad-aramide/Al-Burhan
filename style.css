@@ -733,6 +733,9 @@ section:not(.hero) {
     .footer .footer_content .footer_links .footer_company {
         width: 33.33%;
     }
+    .footer .footer_logos_social {
+        margin-block: 1rem;
+    }
     .copyright {
         flex-direction: column;
     }
@@ -745,6 +748,9 @@ section:not(.hero) {
 /* Mobile view */
 
 @media (max-width: 600px) {
+    * {
+        line-height: normal !important;
+    }
     .hero .hero_content {
         font-style: normal;
         font-weight: 600;
@@ -761,7 +767,11 @@ section:not(.hero) {
         cursor: pointer;
     }
 
-    .about .about_content button {
+    .about .about_content button,
+    .programs .programs_body .programs_item button,
+    .programs .programs_body .programs_item:nth-child(even) button,
+    .ask .ask_content button,
+    .umrah .umrah_content button {
         width: 100%;
     }
 
@@ -775,11 +785,33 @@ section:not(.hero) {
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
     }
+    .footer_content {
+        padding-inline: 1rem;
+    }
+    .footer .footer_content .footer_links h3 {
+        line-height: normal;
+        font-size: 20px;
+    }
     .footer button .mobile {
         display: block;
         width: fit-content;
     }
     .footer button .desktop {
         display: none;
+    }
+    .footer .footer_newsletter{
+        padding-inline: 1rem;
+        text-align: center;
+        margin-top: 1rem;
+    }
+    .footer .footer_newsletter .footer_newsletter_form{
+        padding-inline: 1rem;
+    }
+    .footer .footer_newsletter .footer_newsletter_form button {
+        padding-inline: 1rem;
+        right: 3rem;
+    }
+    .footer .footer_logos_social {
+        margin-block: 1rem;
     }
 }

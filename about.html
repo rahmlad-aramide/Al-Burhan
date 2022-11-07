@@ -9,25 +9,47 @@
     <link rel="stylesheet" href="Stylesheets/style.css" />
     <link rel="stylesheet" href="Stylesheets/about.css">
     <script defer src="Scripts/script.js"></script>
+    <script defer src="Scripts/about.js"></script>
   </head>
   <body>
-    <header class="header">
+    <header class="header about-header">
       <div class="brand"><img src="Assets/small-logo.svg" alt="Al-Burhan"></div>
       <nav class="toggler">
           <div class="hamburger">
               <img class="open" src="Assets/toggler.svg" alt="Toggler">
           </div>
-          <ul class="nav-links">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="#" class="active">About Us</a></li>
-          </ul>
           <div class="mobile-nav">
-              <div class="close">&times;</div>
-              <ul class="mobile-nav-links">
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="#" class="active">About Us</a></li>
+            <div class="close">&times;</div>
+            <ul class="mobile-nav-links right">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#prayer" class="anchor-tag">Prayer Time</a></li>
+                <li><a href="#videos" class="anchor-tag">Videos<img src="Assets/dropdown.svg" alt="dropdown icon"></a></li>
+                <li><a href="#activities" class="anchor-tag">Welfare</a></li>
+                <li><a href="#activities" class="anchor-tag">Donation</a></li>
+                <li><a href="#contact" class="anchor-tag">Contact Us</a></li>
+            </ul>
+            <ul class="mobile-nav-links">
+                <li><a href="#" class="active about-link" id="about-link">About Us <img src="Assets/dropdown.svg" alt="dropdown icon"></a></li>
+                <li><a href="#gallery" class="anchor-tag">Gallery <img src="Assets/dropdown.svg" alt="dropdown icon"></a></li>
+                <li><a href="#audios" class="anchor-tag">Audios <img src="Assets/dropdown.svg" alt="dropdown icon"></a></li>
+                <li><a href="#livestream" class="anchor-tag">Livestream</a></li>
+                <li><a href="#ask" class="anchor-tag">Ask a Shaykh</a></li>
+                <li><a href="#signup" class="anchor-tag">Sign Up</a></li>
+            </ul>
+            <div class="sub-links">
+              <ul class="nav-sub-links right">
+                <li><a href="#news" class="anchor-tag">News</a></li>
+                <li><a id="articles-link" href="#articles" class="anchor-tag">Articles<img src="Assets/dropdown.svg" alt="dropdown icon"></a></li>
+                <li><a href="#library" class="anchor-tag">Library</a></li>
+                <li><a href="#kids" class="anchor-tag">Kids Zone</a></li>
+                <li><a href="#team" class="anchor-tag">Meet our Team</a></li>
               </ul>
-          </div>
+              <ul class="nav-sub-links">
+                <li><a href="#mission" class="anchor-tag">Mission</a></li>
+                <li><a href="#vision" class="anchor-tag">Vision</a></li>
+              </ul>
+            </div>
+        </div>
       </nav>
   </header>
     <main class="about_page">
@@ -71,7 +93,7 @@
         <div class="m-v_head">
           <h2>Mission & Vision</h2>
         </div>
-        <div class="vision">
+        <div class="vision" id="vision">
           <h3>Vision</h3>
           <p>
             Our Vision: "Correcting the wrong practices of our Ummah"
@@ -86,7 +108,7 @@
             the Muslim Ummah.
           </p>
         </div>
-        <div class="mission">
+        <div class="mission" id="mission">
           <h3>Mission</h3>
           <p>
             "Sending pristine message of Islam to Entirety of Human Race"

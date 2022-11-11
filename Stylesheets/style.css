@@ -226,7 +226,7 @@ section#prayer {
 
 .hero .dots {
     position: absolute;
-    bottom: 4rem;
+    bottom: 2rem;
     display: flex;
 }
 
@@ -693,6 +693,9 @@ section#prayer {
         cursor: pointer;
     }
 
+    .hero .dots {
+        bottom: 4rem;
+    }
     .about {
         flex-direction: column;
         height: fit-content;
